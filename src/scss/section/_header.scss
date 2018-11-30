@@ -14,7 +14,7 @@
     top: 0;
     width: 100%;
 
-    @media screen and (max-width:690px) and (orientation: landscape) {
+    @media screen and (max-width: 690px) and (orientation: landscape) {
       min-height: 170vh;
     }
   }
@@ -42,6 +42,10 @@
   order: 2;
   text-align: center;
   z-index: 1;
+
+  @media screen and (max-width: 690px) and (orientation: landscape) {
+    margin-top: -15rem;
+  }
 
   @include breakpoint("small-desktop-up") {
     margin: 0 rem(10);
