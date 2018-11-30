@@ -44,7 +44,7 @@
   z-index: 1;
 
   @media screen and (max-width: 690px) and (orientation: landscape) {
-    margin-top: -15rem;
+    margin-top: -15.2rem;
   }
 
   @include breakpoint("small-desktop-up") {
