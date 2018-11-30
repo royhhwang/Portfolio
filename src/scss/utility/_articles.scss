@@ -1,0 +1,125 @@
+.article {
+  background-color: color(bg-green);
+  width: 100%;
+  color: #fff;
+  padding-top: 4rem;
+  position: relative;
+}
+
+.article__title {
+  font-size: 3rem;
+  line-height: 4.5rem;
+  margin: 3rem 0;
+  text-align: center;
+
+  span {
+    background-color: color(bright-green);
+    color: color(bg-green);
+    padding: 0.3rem 2rem;
+  }
+
+  @include breakpoint("small-desktop-up") {
+    font-size: 5rem;
+
+    span {
+      padding: 0.5rem 2rem;
+    }
+  }
+}
+
+.article__video {
+  display: inline-block;
+  line-height: 2em;
+  width: 100%;
+  max-height: 540px;
+  pointer-events: none;
+
+  @include breakpoint("large-tablet-up") {
+    max-height: 450px;
+  }
+}
+
+.article__content {
+  width: 100%;
+  max-width: 960px;
+  padding: 0 1rem;
+  margin: 0 auto;
+
+  @include breakpoint("large-tablet-up") {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.article__content__container {
+  padding: 2rem 1rem 1rem;
+
+  @include breakpoint("large-tablet-up") {
+    padding: 2rem 1rem 3rem;
+  }
+}
+
+.article__content__heading {
+  font-size: 1.375rem;
+  margin-bottom: 0.4rem;
+}
+
+.article__content__tech {
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  max-width: 690px;
+
+  strong {
+    color: color(bright-green);
+  }
+}
+
+.article__content__tech,
+.article__content__summary {
+  @include smooth;
+}
+
+.article__content__summary {
+  @include Muli;
+}
+
+.article__content__list {
+  list-style: circle;
+  flex-basis: 10%;
+  width: 100%;
+  padding-left: 1em;
+  line-height: 1.3;
+
+  @include RobotoMonoLight;
+}
+
+.-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: rem(8);
+}
+
+.-mobile {
+  @include breakpoint("large-tablet-up") {
+    display: none;
+  }
+}
+
+.-desktop {
+  display: none;
+
+  @include breakpoint("large-tablet-up") {
+    display: inline-block;
+  }
+}
+
+.-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.-circle {
+  border-radius: 30px;
+}

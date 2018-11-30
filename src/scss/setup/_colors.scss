@@ -1,0 +1,18 @@
+// Variables
+$colors: (
+  light-gray: #b4b4b4,
+  orange: #ff4400,
+  bright-green: #beff69,
+  bg-green: #96a17a,
+  text-bg-green: #768352
+);
+
+// Function
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown '#{$key}' in $colors.";
+  @return null;
+}

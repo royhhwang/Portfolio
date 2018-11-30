@@ -1,0 +1,27 @@
+.button--state--top {
+  position: fixed;
+  bottom: rem(15);
+  right: rem(25);
+  width: auto;
+  height: auto;
+  transition: opacity speed(fast-speed) linear,
+    transform speed(fast-speed) linear;
+  z-index: 10;
+
+  img {
+    width: rem(40);
+    height: rem(40);
+  }
+
+  &:hover {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  @include breakpoint('small-desktop-up') {
+    img {
+      width: rem(50);
+      height: rem(50);
+    }
+  }
+}

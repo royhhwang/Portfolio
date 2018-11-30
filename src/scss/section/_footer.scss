@@ -1,0 +1,23 @@
+.footer {
+  background-attachment: fixed;
+  background-size: 100%;
+  height: 5rem;
+  margin-top: 1rem;
+  position: relative;
+  width: 100%;
+
+  &:before {
+    background-color: color(bg-green);
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.88;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  @include breakpoint("large-tablet-up") {
+    background-size: 40%;
+  }
+}

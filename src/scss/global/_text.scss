@@ -1,0 +1,17 @@
+body {
+    @include RobotoMono;
+}
+
+.section__header {
+    color: color(light-gray);
+    font-size: 5em;
+    overflow: hidden;
+    padding: 2rem 0 1rem;
+    width: 100%;
+    letter-spacing: -10px;
+  
+    @include breakpoint('large-tablet-up') {
+      font-size: 6em;
+      padding: 4rem 0 2rem;
+    }
+  }

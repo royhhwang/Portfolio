@@ -1,0 +1,93 @@
+.button--green {
+  background-color: color(text-bg-green);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  padding: 0.2em 0.8em;
+  text-transform: uppercase;
+}
+
+.button--social {
+  background-color: color(text-bg-green);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin: rem(8) 0;
+  padding: rem(5) rem(5);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.button--top {
+  bottom: rem(15);
+  height: auto;
+  position: fixed;
+  right: rem(25);
+  transition: opacity speed(fast-speed) linear,
+    transform speed(fast-speed) linear;
+  width: auto;
+  z-index: 10;
+
+  img {
+    height: rem(40);
+    width: rem(40);
+  }
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  @include breakpoint("small-desktop-up") {
+    img {
+      height: rem(50);
+      width: rem(50);
+    }
+  }
+}
+
+.button--contact {
+  background-blend-mode: soft-light;
+  background-color: #788655dc;
+  background-size: 140%;
+  display: inline-block;
+  margin-top: rem(30);
+  padding: 1.25em 2.25em;
+  transition: transform speed(med-speed);
+
+  .button--contact__link {
+    @include smooth;
+
+    align-items: center;
+    color: color(bright-green);
+    display: flex;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color speed(med-speed), background-color speed(med-speed);
+  }
+
+  &:hover {
+    .button--contact__link {
+      background-color: color(bright-green);
+      color: color(bg-green) !important;
+    }
+  }
+
+  @include breakpoint("large-tablet-up") {
+    padding: 0.8em 1em;
+    margin: rem(30) 0;
+  }
+}
+
+.-hide {
+  opacity: 0;
+  transform: translateY(200%);
+}
+
+.-show {
+  opacity: 0.6;
+  transform: translateY(0);
+}

@@ -1,0 +1,97 @@
+.header {
+  background-attachment: fixed;
+  background-image: url("../images/banner-bg.jpg");
+  background-size: 100%;
+  width: 100%;
+
+  &:before {
+    background-color: color(bg-green);
+    content: "";
+    height: 100vh;
+    left: 0;
+    opacity: 0.88;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  @include breakpoint("large-tablet-up") {
+    background-size: 40%;
+  }
+}
+
+.header__wrapper {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 100vh;
+  padding: rem(65) rem(50) rem(10);
+
+  @include breakpoint("small-desktop-up") {
+    flex-wrap: nowrap;
+  }
+}
+
+.header__list {
+  margin-top: -10rem;
+  order: 2;
+  text-align: center;
+  z-index: 1;
+
+  @include breakpoint("small-desktop-up") {
+    margin: 0 rem(10);
+    max-width: 600px;
+    order: initial;
+    text-align: left;
+  }
+}
+
+.header__list__name,
+.header__list__title {
+  background: color(text-bg-green);
+  color: white;
+  display: inline-block;
+  padding: 0 rem(20);
+}
+
+.header__list__name {
+  font-size: rem(100);
+
+  &:first-child {
+    position: relative;
+    z-index: 1;
+  }
+
+  @include breakpoint("small-desktop-up") {
+    font-size: rem(120);
+  }
+  @include breakpoint("large-desktop-up") {
+    font-size: rem(128);
+  }
+}
+
+.header__list__title {
+  font-size: rem(24);
+  margin-top: rem(20);
+
+  @include RobotoMonoLight;
+
+  @include breakpoint("small-desktop-up") {
+    margin-top: rem(24);
+    font-size: rem(30);
+    padding: rem(5) rem(20);
+  }
+}
+
+.header__image {
+  filter: saturate(150%) brightness(1.2);
+  max-height: 560px;
+
+  @include breakpoint("small-desktop-up") {
+    margin: 0 rem(10);
+  }
+  @include breakpoint("large-tablet-down") {
+    width: 125%;
+  }
+}

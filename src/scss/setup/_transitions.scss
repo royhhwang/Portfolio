@@ -1,0 +1,15 @@
+// Variables
+$transitions: (
+  fast-speed: 0.2s,
+  med-speed: 0.3s
+);
+
+// Function
+@function speed($key) {
+  @if map-has-key($transitions, $key) {
+    @return map-get($transitions, $key);
+  }
+  @warn "Unknown '#{$key}' in $transitions.";
+
+  @return null;
+}
