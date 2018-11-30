@@ -6,6 +6,7 @@ import Header from '../components/header.js'
 import Nav from '../components/nav.js'
 import Button from '../components/button.js'
 import Footer from '../components/footer.js'
+import '../scss/app.scss'
 
 const Main = ({ children }) => (
   <StaticQuery
