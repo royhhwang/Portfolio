@@ -14,7 +14,7 @@
     top: 0;
     width: 100%;
 
-    @media screen and (orientation: landscape) {
+    @media screen and (max-width:690px) and (orientation: landscape) {
       min-height: 170vh;
     }
   }
