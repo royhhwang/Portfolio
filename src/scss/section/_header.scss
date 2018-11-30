@@ -13,6 +13,10 @@
     position: absolute;
     top: 0;
     width: 100%;
+
+    @media screen and (orientation: landscape) {
+      min-height: 170vh;
+    }
   }
 
   @include breakpoint("large-tablet-up") {
