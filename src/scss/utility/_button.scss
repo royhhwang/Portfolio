@@ -54,7 +54,6 @@
   background-size: 140%;
   display: inline-block;
   margin-top: rem(30);
-  padding: 1.25em 2.25em;
   transition: transform speed(med-speed);
 
   .button--contact__link {
@@ -65,6 +64,7 @@
     display: flex;
     font-weight: 700;
     letter-spacing: 0.1em;
+    padding: 0.8em 0.8em;
     text-transform: uppercase;
     transition: color speed(med-speed), background-color speed(med-speed);
   }
@@ -74,11 +74,6 @@
       background-color: color(bright-green);
       color: color(bg-green) !important;
     }
-  }
-
-  @include breakpoint("large-tablet-up") {
-    padding: 0.8em 1em;
-    margin: rem(30) 0;
   }
 }
 

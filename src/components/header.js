@@ -1,7 +1,7 @@
 import React from 'react'
 import Face from '../images/rightbanner.jpg'
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header className="header" id="top">
     <div className="header__wrapper wrapper">
       <ul className="header__list">
