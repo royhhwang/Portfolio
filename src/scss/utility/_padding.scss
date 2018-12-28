@@ -1,0 +1,17 @@
+@for $i from 1 through 6 {
+  .padding-bottom-#{$i} {
+    padding-bottom: #{$i}rem;
+  }
+
+  .padding-top-#{$i} {
+    padding-top: #{$i}rem;
+  }
+
+  .padding-right-#{$i} {
+    padding-right: #{$i}rem;
+  }
+
+  .padding-left-#{$i} {
+    padding-left: #{$i}rem;
+  }
+}

@@ -3,21 +3,23 @@ import Link from 'gatsby-link'
 
 const Nav = () => (
   <nav className="nav">
-    <Link className="nav__list"
-      to="/"
-    >
-      Home
+    <ul className="nav__list">
+      <li className="nav__link">
+        <Link to="/">
+          Home
         </Link>
-    <Link className="nav__list"
-      to="/#projects"
-    >
-      Projects
+      </li>
+      <li className="nav__link">
+        <Link to="/#projects">
+          Projects
         </Link>
-    <Link className="nav__list"
-      to="/#about"
-    >
-      About
+      </li>
+      <li className="nav__link">
+        <Link to="/#about">
+          About
         </Link>
+      </li>
+    </ul>
   </nav>
 )
 

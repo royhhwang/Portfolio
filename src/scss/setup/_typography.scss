@@ -1,41 +1,22 @@
 // Imports
-@mixin font-face($name, $filename, $style: normal, $weight: normal) {
-  @font-face {
-    font-family: #{$name};
-    font-style: $style;
-    font-weight: $weight;
-    src: url("../fonts/#{$filename}.ttf");
-  }
-}
-
-@include font-face("RobotoMonoMedium", "RobotoMonoMedium", "normal");
-@include font-face("RobotoMono", "RobotoMonoBold", "normal");
-@include font-face("RobotoMonoLight", "RobotoMonoLight", "normal");
-@include font-face("Muli", "MuliRegular", "normal", 400);
+@import url('https://fonts.googleapis.com/css?family=Muli:400,800|Roboto+Mono:300,700');
 
 // Mixins
 @mixin Muli {
   font-family: "Muli", Arial, Verdana, sans-serif;
-  font-weight: 400;
-}
-
-@mixin RobotoMonoMedium {
-  font-family: "RobotoMonoMedium", Arial, Verdana, sans-serif;
-  font-weight: 700;
 }
 
 @mixin RobotoMono {
-  font-family: "RobotoMono", Arial, Verdana, sans-serif;
+  font-family: "Roboto Mono", Arial, Verdana, sans-serif;
   font-weight: 700;
 }
 
 @mixin RobotoMonoLight {
-  font-family: "RobotoMonoLight", Arial, Verdana, sans-serif;
+  font-family: "Roboto Mono", Arial, Verdana, sans-serif;
   font-weight: 300;
 }
 
 strong {
   color: color(orange);
-  font-weight: 700;
   @include RobotoMono;
 }

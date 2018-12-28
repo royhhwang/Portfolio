@@ -1,88 +1,134 @@
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.button {
+  @include smooth;
+  @include RobotoMono;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
 .button--green {
   background-color: color(text-bg-green);
   color: #fff;
+  display: inline-block;
   font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  padding: 0.2em 0.8em;
-  text-transform: uppercase;
-}
+  margin: 0.5rem 0;
+  overflow: hidden;
+  padding: 0.4rem 0.6rem;
+  position: relative;
+  transition: color speed(fast-speed) ease-in;
 
-.button--social {
-  background-color: color(text-bg-green);
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  margin: rem(8) 0;
-  padding: rem(5) rem(5);
-  text-align: center;
-  text-transform: uppercase;
+  &::before {
+    background: #ffae5d;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform speed(fast-speed) ease-in;
+    width: 100%;
+  }
+
+  span {
+    position: relative;
+    z-index: 10;
+  }
+
+  &:hover,
+  &:active {
+    color: color(text-bg-green);
+
+    &::before {
+      transform: translateX(0);
+    }
+  }
 }
 
 .button--top {
-  bottom: rem(15);
-  height: auto;
+  background: color(orange);
+  bottom: rem(25);
+  color: #fff;
+  font-weight: 700;
+  padding: 0.55rem 0.95rem 0.65rem;
   position: fixed;
-  right: rem(25);
-  transition: opacity speed(fast-speed) linear,
-    transform speed(fast-speed) linear;
-  width: auto;
-  z-index: 10;
+  right: 1rem;
+  transition: opacity speed(fast-speed), transform speed(fast-speed);
+  z-index: 100;
 
-  img {
-    height: rem(40);
-    width: rem(40);
+  &.-hide {
+    opacity: 0;
+    transform: translateY(200%);
   }
 
-  &:hover {
+  &.-show {
     opacity: 1;
-    transform: scale(1.2);
+    transform: translateY(0);
   }
 
-  @include breakpoint("small-desktop-up") {
-    img {
-      height: rem(50);
-      width: rem(50);
-    }
+  .blinker {
+    animation: blink 1.1s infinite;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    height: 1rem;
+    margin-left: 0.2rem;
+    width: 0.65rem;
   }
 }
 
 .button--contact {
   background-blend-mode: soft-light;
-  background-color: #788655dc;
+  background: url("../images/banner-bg.jpg") color(text-bg-green);
   background-size: 140%;
+  color: color(bright-green);
   display: inline-block;
-  margin-top: rem(30);
-  transition: transform speed(med-speed);
+  font-size: 0.9rem;
+  margin: rem(30) 0 rem(15);
+  padding: 1rem 1.4rem;
+  position: relative;
+  transition:
+    background speed(med-speed),
+    box-shadow speed(med-speed),
+    color speed(med-speed),
+    transform speed(med-speed);
+  z-index: 1;
 
-  .button--contact__link {
-    @include smooth;
+  &:hover {
+    background: color(bright-green);
+    box-shadow: 0 24px 88px -8px rgba(30,30,30,.352);
+    color: color(bg-green);
+    transform: scale(1.1);
+  }
+}
 
-    align-items: center;
-    color: color(bright-green);
-    display: flex;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    padding: 0.8em 0.8em;
-    text-transform: uppercase;
-    transition: color speed(med-speed), background-color speed(med-speed);
+.button--social {
+  border: 2px solid color(text-bg-green);
+  color: color(text-bg-green);
+  display: inline-block;
+  margin: 0rem 0.5rem 0.5rem;
+  padding: 0.25rem 0.5rem;
+  transition: background speed(fast-speed), color speed(fast-speed);
+
+  &:first-child {
+    margin-left: 0;
   }
 
   &:hover {
-    .button--contact__link {
-      background-color: color(bright-green);
-      color: color(bg-green) !important;
-    }
+    background: color(text-bg-green);
+    color: color(bright-green);
   }
-}
-
-.-hide {
-  opacity: 0;
-  transform: translateY(200%);
-}
-
-.-show {
-  opacity: 0.6;
-  transform: translateY(0);
 }

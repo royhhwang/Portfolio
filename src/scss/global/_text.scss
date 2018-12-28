@@ -1,17 +1,26 @@
 body {
-    @include RobotoMono;
+  @include Muli;
+  @include smooth;
 }
 
-.section__header {
-    color: color(light-gray);
-    font-size: 5em;
-    overflow: hidden;
-    padding: 2rem 0 1rem;
-    width: 100%;
-    letter-spacing: -10px;
-  
-    @include breakpoint('large-tablet-up') {
-      font-size: 6em;
-      padding: 4rem 0 2rem;
-    }
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+.section-header {
+  color: color(light-gray);
+  font-size: 4em;
+  overflow: hidden;
+  padding: 4rem 0 1rem;
+
+  @include breakpoint('large-tablet-up') {
+    font-size: 6em;
+    padding: 6rem 0 2rem;
   }
+}
+
+.color-light-gray {
+  color: #8a8989;
+}

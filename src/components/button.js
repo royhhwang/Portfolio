@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import TopArrow from '../images/top-arrow.svg'
 
 class Button extends Component {
   constructor(props) {
@@ -24,6 +23,7 @@ class Button extends Component {
     const docHeight = Math.min(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
     const docScreen = docHeight * (7 / 5);
     const windowBottom = windowHeight + window.pageYOffset;
+
     if (windowBottom >= docScreen) {
       this.setState({ height: true });
     }
@@ -35,8 +35,9 @@ class Button extends Component {
   render() {
     let handleArrow = this.state.height ? "-show" : "-hide";
     return (
-      <a href="#top" className={"button--top " + handleArrow}>
-        <img src={TopArrow} alt="Button scrolls back to top" />
+      <a href="https://codepen.io/royhhwang/pens/public/#" className={"button--top " + handleArrow} target="_blank" rel="noopener noreferrer">
+        Lab
+        <span class="blinker"></span>
       </a>
     )
   }

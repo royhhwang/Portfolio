@@ -2,21 +2,16 @@
   background-attachment: fixed;
   background-image: url("../images/banner-bg.jpg");
   background-size: 100%;
-  width: 100%;
+  position: relative;
 
   &:before {
     background-color: color(bg-green);
+    bottom: 0;
     content: "";
-    height: 100vh;
-    left: 0;
     opacity: 0.88;
     position: absolute;
     top: 0;
     width: 100%;
-
-    @media screen and (max-width: 750px) and (orientation: landscape) {
-      min-height: 170vh;
-    }
   }
 
   @include breakpoint("large-tablet-up") {
@@ -37,15 +32,11 @@
   }
 }
 
-.header__list {
+.header__content {
   margin-top: -13rem;
   order: 2;
   text-align: center;
   z-index: 1;
-
-  @media screen and (max-width: 690px) and (orientation: landscape) {
-    margin-top: -15.2rem;
-  }
 
   @include breakpoint("small-desktop-up") {
     margin: 0 rem(10);
@@ -55,31 +46,32 @@
   }
 }
 
-.header__list__name,
-.header__list__title {
+.header__name,
+.header__title {
   background: color(text-bg-green);
   color: white;
   display: inline-block;
-  padding: 0 rem(20);
+  padding: 0.4rem rem(20);
 }
 
-.header__list__name {
-  font-size: rem(100);
+.header__name {
+  font-size: rem(60);
 
   &:first-child {
     position: relative;
     z-index: 1;
   }
 
-  @include breakpoint("small-desktop-up") {
-    font-size: rem(120);
+  @include breakpoint("large-tablet-up") {
+    font-size: rem(80);
   }
-  @include breakpoint("large-desktop-up") {
-    font-size: rem(128);
+
+  @include breakpoint("small-desktop-up") {
+    font-size: rem(115);
   }
 }
 
-.header__list__title {
+.header__title {
   font-size: rem(24);
   margin-top: rem(20);
 
@@ -94,12 +86,5 @@
 
 .header__image {
   filter: saturate(150%) brightness(1.2);
-  max-height: 560px;
-
-  @include breakpoint("small-desktop-up") {
-    margin: 0 rem(10);
-  }
-  @include breakpoint("large-tablet-down") {
-    width: 125%;
-  }
+  max-height: 530px;
 }

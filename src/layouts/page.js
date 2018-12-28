@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Nav from '../components/nav.js'
 import '../scss/app.scss'
 
-const Page = ({ children }) => (
+const Page = ({ children, projectClass }) => (
   <StaticQuery
     query={graphql`
       query PageTitleQuery {
@@ -28,7 +28,7 @@ const Page = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Nav />
-        <main className="main">
+        <main className={"main " + projectClass}>
           {children}
         </main>
       </>

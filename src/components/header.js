@@ -1,15 +1,19 @@
 import React from 'react'
 import Face from '../images/rightbanner.jpg'
+import Nav from '../components/nav.js'
 
 const Header = () => (
   <header className="header" id="top">
+    <Nav />
     <div className="header__wrapper wrapper">
-      <ul className="header__list">
-        <li className="header__list__name">Roy</li>
-        <li className="header__list__name">Hwang</li>
-        <li className="header__list__title">Fullstack Developer</li>
-      </ul>
-      <img className="header__image" src={Face} alt="Roy Hwang - Fullstack Developer" />
+      <div className="header__content">
+        <h1>
+          <span className="header__name">Roy</span>
+          <span className="header__name">Hwang</span>
+        </h1>
+        <p className="header__title">Frontend Developer</p>
+      </div>
+      <img className="header__image" src={Face} alt="Roy Hwang - Frontend Developer" />
     </div>
   </header>
 )

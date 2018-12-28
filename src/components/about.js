@@ -1,79 +1,66 @@
 import React from 'react'
 import Resume from '../static/docs/resume.pdf'
-import Background from '../images/banner-bg.jpg'
-import Git from "../images/github.png"
-import Link from "../images/linkedin.png"
-import Gmail from "../images/gmail.png"
 
 const About = () => (
-  <section className="about wrapper" id="about">
-    <h1 className="section__header">About</h1>
-    <article className="about__wrapper">
-      <div className="about__wrapper__bio">
-        <section className="about__wrapper__para">
+  <section className="padding-bottom-6" id="about">
+    <h2 className="section-header">About</h2>
+      <div className="about__content">
+        <section className="about__bio">
           <p>
-            I’m a <strong>full stack developer</strong> specializing in <strong>Javascript</strong> and the <strong>MERN</strong> stack.
+            I’m a <strong>frontend developer</strong> specializing in <strong>Javascript</strong> and the <strong>MERN</strong> stack.
             A gamer at heart, I bring experience in game programming and design to solve problems with imaginative, out-of-the-box solutions.
-          <br />
-            <br />
+          </p>
+          <p class="divider">
             In a past life, I worked as a <strong>jack-of-all-trades</strong> sales associate managing direct relationships with 120+ companies in the LA region, including Nobu, Matsuhisa, and the Marriott Hotel.
           </p>
-          <hr />
           <p>
-            I'm <strong>currently seeking</strong> a junior-level fullstack or frontend role for a software service I can believe in. Happy to relocate for my next adventure.
+            I'm <strong>currently seeking</strong> a junior-level frontend role for a software service I can believe in. Happy to relocate for my next adventure.
           </p>
-          <aside className="about__aside">
-            <button className="about__aside__contact">
-              <a href="https://github.com/royhhwang" target="_blank" rel="noopener noreferrer">
-                <img src={Git} alt="link to roy's github" />
-              </a>
-            </button>
-            <button className="about__aside__contact">
-              <a href="https://www.linkedin.com/in/royhhwang/" target="_blank" rel="noopener noreferrer">
-                <img src={Link} alt="link to roy's linkedin" />
-              </a>
-            </button>
-            <button className="about__aside__contact">
-              <a href="mailto:royhhwang@gmail.com" target="_blank" rel="noopener noreferrer">
-                <img src={Gmail} alt="write me an email" />
-              </a>
-            </button>
+          <aside className="about__contact">
+            <p className="button">Contact:</p>
+            <a className="button button--social" href="mailto:royhhwang@gmail.com" target="_blank" rel="noopener noreferrer">
+              Email
+            </a>
+            <a className="button button--social" href="https://www.linkedin.com/in/royhhwang/" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+            <a className="button button--social" href="https://github.com/royhhwang" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+            <a className="button button--social" href="https://codepen.io/royhhwang/pens/public/#" target="_blank" rel="noopener noreferrer">
+              Codepen
+            </a>
           </aside>
         </section>
-        <div className="about__experience">
+        <aside className="about__experience">
           <ul>
+            <li class="padding-bottom-2">
+              <h3 className="about__subheading">Freelance Web Developer</h3>
+              <p className="color-light-gray">Oct 2018 - Present</p>
+              <p>Current projects include custom Wordpress theme creation and an accessibility audit.</p>
+            </li>
             <li>
-              <h3 className="about__experience__institute">
-                The Coding Boot Camp |  UCI
-                </h3>
-              <p className="about__experience__role">Student</p>
-              <p className="about__experience__date">Oct 2017 - Jan 2018</p>
+              <h3 className="about__subheading">The Coding Boot Camp, University of CA Irvine</h3>
+              <p className="color-light-gray">Oct 2017 - Jan 2018</p>
             </li>
           </ul>
-          <ul className="about__toolkit">
-            <li>
-              <h3 className="about__toolkit__title">
-                Fullstack Development
-                </h3>
-            </li>
+          <h3 className="about__subheading padding-top-2">
+            Frontend Development
+          </h3>
+          <ul>
             <li>JavaScript ES5 / ES6</li>
             <li>HTML5</li>
             <li>CSS3</li>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>React</li>
-            <li>Wordpress</li>
-            <li>MongoDB</li>
-            <li>jQuery</li>
             <li>Sass</li>
-            <li>Gatsby.js</li>
+            <li>React</li>
+            <li>Gatsby</li>
+            <li>Wordpress</li>
           </ul>
-          <button className="button--contact" style={{ backgroundImage: "url(" + Background + ")" }}>
-            <a href={Resume} className="button--contact__link" target="_blank" rel="noopener noreferrer">View Resume</a>
-          </button>
-        </div>
+          <a href={ Resume } className="button button--contact" target="_blank" rel="noopener noreferrer">
+            View Resume
+          </a>
+        </aside>
       </div>
-    </article>
   </section >
 )
 

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from '../components/header.js'
-import Nav from '../components/nav.js'
 import Button from '../components/button.js'
 import Footer from '../components/footer.js'
 import '../scss/app.scss'
@@ -31,9 +30,10 @@ const Main = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Nav />
         <main className="main">
-          {children}
+          <div class="wrapper">
+            {children}
+          </div>
         </main>
         <Button />
         <Footer />

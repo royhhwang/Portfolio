@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Fade } from 'react-reveal'
 import KnobCreek from '../images/knobcreek.jpeg'
 import Artsy from '../images/artsyjpg.jpg'
 import Ring from '../images/ring.jpg'
@@ -67,30 +66,27 @@ class Projects extends Component {
   }
 
   render() {
-    const projectList = this.state.projects.map((work, index) => {
-      if (index < 12) {
-        return (
-          <li className="projects__list__items" key={index}>
-            <a className="projects__list__link" href={work.link}>
-              <article className="projects__content">
-                <h2 className="projects__content__title">{work.name}</h2>
-                <br />
-                <p className="projects__content__subtitle">{work.tech}</p>
-              </article>
-              <img className="projects__list__thumbnail" src={work.image} alt={work.descript} />
-            </a>
-          </li>
-        )
-      }
-      else { return null }
-    })
+    const projectList = this.state.projects.map((work, index) => (
+      <li className="project__item" key={ index }>
+        <a className="project__link" href={ work.link }>
+          <div className="projects__content">
+            <h3 className="projects__content__title">
+              { work.name }
+            </h3>
+            <br />
+            <p className="projects__content__subtitle">
+              { work.tech }
+            </p>
+          </div>
+          <img className="project__thumbnail" src={ work.image } alt={ work.descript } />
+        </a>
+      </li>
+    ))
     return (
-      <section className="projects__wrapper wrapper" id="projects" >
-        <h1 className="section__header">Projects</h1>
+      <section className="projects__wrapper" id="projects">
+        <h2 className="section-header">Projects</h2>
         <ul className="projects__list">
-          <Fade bottom>
-            {projectList}
-          </Fade>
+          { projectList }
         </ul>
       </section >
     )

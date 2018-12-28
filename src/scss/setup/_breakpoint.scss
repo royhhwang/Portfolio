@@ -1,7 +1,8 @@
 // Breakpoints
 $breakpoints: (
-  "large-tablet-down"  : "max-width: 499px",
-  "large-tablet-up"    : "min-width: 500px",
+  "large-tablet-down"  : "max-width: 599px",
+  "large-tablet-up"    : "min-width: 600px",
+  "small-desktop-down" : "max-width: 959px",
   "small-desktop-up"   : "min-width: 960px",
   "med-desktop-up"     : "min-width: 1020px",
   "large-desktop-up"   : "min-width: 1120px",
