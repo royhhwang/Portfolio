@@ -21,7 +21,7 @@ class Button extends Component {
     const body = document.body;
     const html = document.documentElement;
     const docHeight = Math.min(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-    const docScreen = docHeight * (7 / 5);
+    const docScreen = docHeight * (2);
     const windowBottom = windowHeight + window.pageYOffset;
 
     if (windowBottom >= docScreen) {

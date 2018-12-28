@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from '../components/header.js'
-import Button from '../components/button.js'
+import Lab from '../components/lab.js'
 import Footer from '../components/footer.js'
 import '../scss/app.scss'
 
@@ -35,7 +35,7 @@ const Main = ({ children }) => (
             {children}
           </div>
         </main>
-        <Button />
+        <Lab />
         <Footer />
       </>
     )}
